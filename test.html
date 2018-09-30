@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body style="padding:200px">
+    <label>李青是个小二货</label>
+    <a id="zan" href="#">赞</a>&nbsp;<label id="jilu"></label>
+    </body>
+</html>
+<script>
+
+    var zan = document.getElementById("zan");
+    var jilu = document.getElementById("jilu");
+    var shu = 1;
+    var bendi = localStorage.getItem("zan");
+    if (bendi) {
+        shu = bendi;
+        jilu.innerText = shu;
+
+    }
+    zan.onclick = function () {
+        shu++;
+        localStorage.setItem("zan", shu);
+        jilu.innerText = shu;
+    }
+</script>
